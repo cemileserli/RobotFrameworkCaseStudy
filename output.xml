@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on darwin)" generated="20200315 00:47:18.351" rpa="false">
+<suite id="s1" name="Gherkin Login" source="/Users/cemileserli/Desktop/RobotFramework/WebDemo-master/login_tests/gherkin_login.robot">
+<test id="s1-t1" name="Valid Login">
+<kw name="Given browser is opened to login page">
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${HOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200315 00:47:18.558" level="INFO">Opening browser 'Chrome' to base url 'https://www.hepsiburada.com/'.</msg>
+<status status="PASS" starttime="20200315 00:47:18.558" endtime="20200315 00:47:22.414"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200315 00:47:22.414" endtime="20200315 00:47:22.762"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20200315 00:47:22.762" endtime="20200315 00:47:22.763"></status>
+</kw>
+<kw name="Homepage Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Türkiye'nin En Büyük Online Alışveriş Sitesi Hepsiburada.com</arg>
+</arguments>
+<msg timestamp="20200315 00:47:22.776" level="INFO">Page title is 'Türkiye'nin En Büyük Online Alışveriş Sitesi Hepsiburada.com'.</msg>
+<status status="PASS" starttime="20200315 00:47:22.764" endtime="20200315 00:47:22.776"></status>
+</kw>
+<status status="PASS" starttime="20200315 00:47:22.764" endtime="20200315 00:47:22.776"></status>
+</kw>
+<kw name="Open Header Menu" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@id='myAccount']</arg>
+</arguments>
+<msg timestamp="20200315 00:47:22.777" level="INFO">Clicking element '//div[@id='myAccount']'.</msg>
+<status status="PASS" starttime="20200315 00:47:22.777" endtime="20200315 00:47:22.832"></status>
+</kw>
+<status status="PASS" starttime="20200315 00:47:22.776" endtime="20200315 00:47:22.832"></status>
+</kw>
+<kw name="Click Login Link" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//a[@id='login']</arg>
+</arguments>
+<status status="PASS" starttime="20200315 00:47:22.833" endtime="20200315 00:47:23.303"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@id='login']</arg>
+</arguments>
+<msg timestamp="20200315 00:47:23.303" level="INFO">Clicking element '//a[@id='login']'.</msg>
+<status status="PASS" starttime="20200315 00:47:23.303" endtime="20200315 00:47:23.570"></status>
+</kw>
+<status status="PASS" starttime="20200315 00:47:22.832" endtime="20200315 00:47:23.570"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Üye Giriş Sayfası – Hepsiburada.com</arg>
+</arguments>
+<msg timestamp="20200315 00:47:23.576" level="INFO">Page title is 'Üye Giriş Sayfası – Hepsiburada.com'.</msg>
+<status status="PASS" starttime="20200315 00:47:23.571" endtime="20200315 00:47:23.576"></status>
+</kw>
+<status status="PASS" starttime="20200315 00:47:23.570" endtime="20200315 00:47:23.577"></status>
+</kw>
+<status status="PASS" starttime="20200315 00:47:18.557" endtime="20200315 00:47:23.577"></status>
+</kw>
+<status status="PASS" starttime="20200315 00:47:18.557" endtime="20200315 00:47:23.578"></status>
+</kw>
+<kw name="When User &quot;${username}&quot; logs in with password &quot;${password}&quot;">
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@id='email']</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200315 00:47:23.581" level="INFO">Typing text 'mail@mail.com' into text field '//input[@id='email']'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200315 00:47:24.506" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200315 00:47:23.591" endtime="20200315 00:47:24.506"></status>
+</kw>
+<msg timestamp="20200315 00:47:24.514" level="FAIL">Element with locator '//input[@id='email']' not found.</msg>
+<status status="FAIL" starttime="20200315 00:47:23.581" endtime="20200315 00:47:24.514"></status>
+</kw>
+<status status="FAIL" starttime="20200315 00:47:23.580" endtime="20200315 00:47:24.515"></status>
+</kw>
+<status status="FAIL" starttime="20200315 00:47:23.579" endtime="20200315 00:47:24.515"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200315 00:47:24.515" endtime="20200315 00:47:24.605"></status>
+</kw>
+<status status="FAIL" starttime="20200315 00:47:18.557" endtime="20200315 00:47:24.605" critical="yes">Element with locator '//input[@id='email']' not found.</status>
+</test>
+<doc>A test suite with a single Gherkin style test.
+
+This test is functionally identical to the example in
+valid_login.robot file.</doc>
+<status status="FAIL" starttime="20200315 00:47:18.352" endtime="20200315 00:47:24.606"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Gherkin Login">Gherkin Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
