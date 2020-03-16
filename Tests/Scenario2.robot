@@ -11,10 +11,7 @@ Test Teardown     utils.close session
 
 
 *** Test Cases ***
-Logging in to App
-    homepageApp.Login app
-    loginpageApp.Submit Login Form
-    homepageApp.Find a suitable Item
-    productpageApp.Add Item To Basket
-    productpageApp.Open Basket
-    basketpageApp.Go to Payment Process
+Open App
+    homepageApp.Open home page
+
+

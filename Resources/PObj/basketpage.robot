@@ -2,8 +2,6 @@
 Library  SeleniumLibrary
 Library  DebugLibrary
 
-
-
 *** Variables ***
 ${basket_Title}  Sepetim
 ${shipment_Title}  Teslimat Bilgileri
@@ -29,11 +27,11 @@ Shipment Page Continue
     Sleep  2
 
 
-
-
 Card Detail Page Continue
     Title Should be  ${payment_Title}
+    Sleep  2
     Wait Until Element Is Visible   ${selector_CardInput_Area}
     Click Element  ${selector_CardInput_Area}
     Sleep  2
     Wait Until Element Is Visible  ${selector_CardDetail_Area}
+    debug

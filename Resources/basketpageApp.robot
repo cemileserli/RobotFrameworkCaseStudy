@@ -6,7 +6,6 @@ Resource  ./PObj/basketpage.robot
 *** Variables ***
 
 
-
 *** Keywords ***
 Go to Payment Process
     basketpage.Click Finish Shopping
