@@ -5,7 +5,6 @@ Resource  ./PObj/productpage.robot
 *** Variables ***
 
 
-
 *** Keywords ***
 Add Item To Basket
     productpage.Verify Product in Stock

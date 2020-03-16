@@ -6,7 +6,6 @@ Resource  ./PObj/loginpage.robot
 *** Variables ***
 
 
-
 *** Keywords ***
 Submit Login Form
     loginpage.Verify Login page

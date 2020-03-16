@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on darwin)" generated="20200316 20:57:12.495" rpa="false">
+<suite id="s1" name="Scenario2" source="/Users/cemileserli/Desktop/RobotFramework/firefly-challenge/fireflyCaseStudy/Tests/Scenario2.robot">
+<test id="s1-t1" name="Open App">
+<kw name="start session" library="utils" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${Emptypage Url}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200316 20:57:12.671" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200316 20:57:12.670" endtime="20200316 20:57:14.571"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200316 20:57:14.572" endtime="20200316 20:57:14.693"></status>
+</kw>
+<status status="PASS" starttime="20200316 20:57:12.670" endtime="20200316 20:57:14.694"></status>
+</kw>
+<kw name="Open home page" library="homepageApp">
+<kw name="go to homepage" library="homepage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${HOME URL}</arg>
+</arguments>
+<msg timestamp="20200316 20:57:14.695" level="INFO">Opening url 'https://www.hepsiburada.com/'</msg>
+<status status="PASS" starttime="20200316 20:57:14.695" endtime="20200316 20:57:18.547"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${selector_homepage_title}</arg>
+</arguments>
+<msg timestamp="20200316 20:57:18.552" level="INFO">Page title is 'Türkiye'nin En Büyük Online Alışveriş Sitesi Hepsiburada.com'.</msg>
+<status status="PASS" starttime="20200316 20:57:18.547" endtime="20200316 20:57:18.552"></status>
+</kw>
+<status status="PASS" starttime="20200316 20:57:14.695" endtime="20200316 20:57:18.552"></status>
+</kw>
+<kw name="Search for a product" library="homepage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector_search_field}</arg>
+</arguments>
+<status status="PASS" starttime="20200316 20:57:18.552" endtime="20200316 20:57:18.613"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${selector_search_field}</arg>
+<arg>${search_Plaintext}</arg>
+</arguments>
+<msg timestamp="20200316 20:57:18.614" level="INFO">Typing text 'bluetooth kulaklık' into text field '//input[@id='productSearch']'.</msg>
+<status status="PASS" starttime="20200316 20:57:18.613" endtime="20200316 20:57:18.798"></status>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20200316 20:57:18.799" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20200316 20:57:18.799" endtime="20200316 20:57:19.634"></status>
+</kw>
+<status status="PASS" starttime="20200316 20:57:18.552" endtime="20200316 20:57:19.635"></status>
+</kw>
+<kw name="Filter for Jbl Brand" library="homepage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector_BrandSearch}</arg>
+</arguments>
+<status status="PASS" starttime="20200316 20:57:19.636" endtime="20200316 20:57:20.489"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200316 20:57:23.492" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200316 20:57:20.489" endtime="20200316 20:57:23.492"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selector_BrandSearch}</arg>
+</arguments>
+<msg timestamp="20200316 20:57:23.493" level="INFO">Clicking element '//li[@title='JBL']'.</msg>
+<status status="PASS" starttime="20200316 20:57:23.493" endtime="20200316 20:57:24.951"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200316 20:57:27.953" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200316 20:57:24.951" endtime="20200316 20:57:27.953"></status>
+</kw>
+<status status="PASS" starttime="20200316 20:57:19.635" endtime="20200316 20:57:27.954"></status>
+</kw>
+<kw name="Filter for Price Range" library="homepage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector_PriceRange}</arg>
+</arguments>
+<status status="PASS" starttime="20200316 20:57:27.954" endtime="20200316 20:57:27.977"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200316 20:57:30.979" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200316 20:57:27.977" endtime="20200316 20:57:30.979"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selector_PriceRange}</arg>
+</arguments>
+<msg timestamp="20200316 20:57:30.980" level="INFO">Clicking element '//li[@alt="750 - 1000 TL"]'.</msg>
+<status status="PASS" starttime="20200316 20:57:30.980" endtime="20200316 20:57:32.257"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20200316 20:57:37.258" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200316 20:57:32.257" endtime="20200316 20:57:37.258"></status>
+</kw>
+<status status="PASS" starttime="20200316 20:57:27.954" endtime="20200316 20:57:37.258"></status>
+</kw>
+<kw name="Filter for Color" library="homepage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${selector_ColorOption}</arg>
+</arguments>
+<status status="PASS" starttime="20200316 20:57:37.260" endtime="20200316 20:57:37.287"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200316 20:57:40.288" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200316 20:57:37.287" endtime="20200316 20:57:40.288"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${selector_ColorOption}</arg>
+</arguments>
+<msg timestamp="20200316 20:57:40.289" level="INFO">Clicking element '//li[@alt="Siyah"]'.</msg>
+<status status="PASS" starttime="20200316 20:57:40.289" endtime="20200316 20:57:40.866"></status>
+</kw>
+<kw name="Debug" library="DebugLibrary">
+<doc>Open a interactive shell, run any RobotFramework keywords.</doc>
+<status status="PASS" starttime="20200316 20:57:40.867" endtime="20200316 20:58:01.145"></status>
+</kw>
+<status status="PASS" starttime="20200316 20:57:37.259" endtime="20200316 20:58:01.145"></status>
+</kw>
+<status status="PASS" starttime="20200316 20:57:14.694" endtime="20200316 20:58:01.145"></status>
+</kw>
+<kw name="close session" library="utils" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200316 20:58:01.145" endtime="20200316 20:58:01.266"></status>
+</kw>
+<status status="PASS" starttime="20200316 20:58:01.145" endtime="20200316 20:58:01.266"></status>
+</kw>
+<status status="PASS" starttime="20200316 20:57:12.669" endtime="20200316 20:58:01.267" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200316 20:57:12.496" endtime="20200316 20:58:01.269"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Scenario2">Scenario2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

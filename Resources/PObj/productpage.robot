@@ -19,6 +19,7 @@ Verify Product in Stock
 
 Add Item To Basket
     ${basket_countBefore}=  Get Text  ${basket_count}
+    Sleep  2
     Click Element  ${selector_addToCart_Button}
     log to console  ${basket_countBefore}
     Sleep  2
