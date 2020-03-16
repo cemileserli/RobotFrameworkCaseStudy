@@ -10,8 +10,8 @@ ${selector_LoggedinPage_title}      Üye Giriş Sayfası – Hepsiburada.com
 ${selector_EmailField_Text}         //input[@id='email']
 ${selector_PasswordField_Text}      //input[@id='password']
 ${selector_recommended_element}  //*[@id="recommendation_9"]/div/div/div[2]/div/div/div/div/div[1]/div/div/a
-${username}      cemil.eserli@gmail.com
-${password}      2x19862x
+${username}      Input your email
+${password}      Input your password
 ${selector_LoginSubmit_button}  Giriş
 
 
