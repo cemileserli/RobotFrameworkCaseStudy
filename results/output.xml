@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.3 on darwin)" generated="20200315 21:46:08.028" rpa="false">
-<suite id="s1" name="Scenario1" source="/Users/cemileserli/Desktop/RobotFramework/WebDemo-master/Tests/Scenario1.robot">
-<test id="s1-t1" name="Logging in to App">
+<robot generator="Robot 3.1.2 (Python 3.7.3 on darwin)" generated="20200316 20:57:12.495" rpa="false">
+<suite id="s1" name="Scenario2" source="/Users/cemileserli/Desktop/RobotFramework/firefly-challenge/fireflyCaseStudy/Tests/Scenario2.robot">
+<test id="s1-t1" name="Open App">
 <kw name="start session" library="utils" type="setup">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
@@ -9,424 +9,169 @@
 <arg>${Emptypage Url}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20200315 21:46:08.367" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20200315 21:46:08.367" endtime="20200315 21:46:10.254"></status>
+<msg timestamp="20200316 20:57:12.671" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200316 20:57:12.670" endtime="20200316 20:57:14.571"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200315 21:46:10.254" endtime="20200315 21:46:10.394"></status>
+<status status="PASS" starttime="20200316 20:57:14.572" endtime="20200316 20:57:14.693"></status>
 </kw>
-<status status="PASS" starttime="20200315 21:46:08.367" endtime="20200315 21:46:10.394"></status>
+<status status="PASS" starttime="20200316 20:57:12.670" endtime="20200316 20:57:14.694"></status>
 </kw>
-<kw name="Login app" library="homepageApp">
+<kw name="Open home page" library="homepageApp">
 <kw name="go to homepage" library="homepage">
 <kw name="Go To" library="SeleniumLibrary">
 <doc>Navigates the current browser window to the provided ``url``.</doc>
 <arguments>
 <arg>${HOME URL}</arg>
 </arguments>
-<msg timestamp="20200315 21:46:10.395" level="INFO">Opening url 'https://www.hepsiburada.com/'</msg>
-<status status="PASS" starttime="20200315 21:46:10.395" endtime="20200315 21:46:17.453"></status>
+<msg timestamp="20200316 20:57:14.695" level="INFO">Opening url 'https://www.hepsiburada.com/'</msg>
+<status status="PASS" starttime="20200316 20:57:14.695" endtime="20200316 20:57:18.547"></status>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <doc>Verifies that the current page title equals ``title``.</doc>
 <arguments>
 <arg>${selector_homepage_title}</arg>
 </arguments>
-<msg timestamp="20200315 21:46:17.539" level="INFO">Page title is 'Türkiye'nin En Büyük Online Alışveriş Sitesi Hepsiburada.com'.</msg>
-<status status="PASS" starttime="20200315 21:46:17.453" endtime="20200315 21:46:17.539"></status>
+<msg timestamp="20200316 20:57:18.552" level="INFO">Page title is 'Türkiye'nin En Büyük Online Alışveriş Sitesi Hepsiburada.com'.</msg>
+<status status="PASS" starttime="20200316 20:57:18.547" endtime="20200316 20:57:18.552"></status>
 </kw>
-<status status="PASS" starttime="20200315 21:46:10.395" endtime="20200315 21:46:17.539"></status>
+<status status="PASS" starttime="20200316 20:57:14.695" endtime="20200316 20:57:18.552"></status>
 </kw>
-<kw name="Redirect to Login page" library="homepage">
+<kw name="Search for a product" library="homepage">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
-<arg>${selector_girisyap_button}</arg>
+<arg>${selector_search_field}</arg>
 </arguments>
-<status status="PASS" starttime="20200315 21:46:17.540" endtime="20200315 21:46:17.576"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${selector_girisyap_button}</arg>
-</arguments>
-<msg timestamp="20200315 21:46:17.577" level="INFO">Clicking element '//div[@id='myAccount']'.</msg>
-<status status="PASS" starttime="20200315 21:46:17.577" endtime="20200315 21:46:17.962"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>${selector_login_input}</arg>
-</arguments>
-<status status="PASS" starttime="20200315 21:46:17.962" endtime="20200315 21:46:18.205"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${selector_login_input}</arg>
-</arguments>
-<msg timestamp="20200315 21:46:18.206" level="INFO">Clicking element '//a[@id='login']'.</msg>
-<status status="PASS" starttime="20200315 21:46:18.206" endtime="20200315 21:46:18.709"></status>
-</kw>
-<status status="PASS" starttime="20200315 21:46:17.539" endtime="20200315 21:46:18.709"></status>
-</kw>
-<status status="PASS" starttime="20200315 21:46:10.394" endtime="20200315 21:46:18.710"></status>
-</kw>
-<kw name="Submit Login Form" library="loginpageApp">
-<kw name="Verify Login page" library="loginpage">
-<kw name="Title Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current page title equals ``title``.</doc>
-<arguments>
-<arg>${selector_LoggedinPage_title}</arg>
-</arguments>
-<msg timestamp="20200315 21:46:18.722" level="INFO">Page title is 'Üye Giriş Sayfası – Hepsiburada.com'.</msg>
-<status status="PASS" starttime="20200315 21:46:18.711" endtime="20200315 21:46:18.723"></status>
-</kw>
-<status status="PASS" starttime="20200315 21:46:18.711" endtime="20200315 21:46:18.723"></status>
-</kw>
-<kw name="Fill Form and Login" library="loginpage">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>${selector_EmailField_Text}</arg>
-</arguments>
-<status status="PASS" starttime="20200315 21:46:18.723" endtime="20200315 21:46:19.218"></status>
+<status status="PASS" starttime="20200316 20:57:18.552" endtime="20200316 20:57:18.613"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>${selector_EmailField_Text}</arg>
-<arg>${username}</arg>
+<arg>${selector_search_field}</arg>
+<arg>${search_Plaintext}</arg>
 </arguments>
-<msg timestamp="20200315 21:46:19.218" level="INFO">Typing text 'mail@mail.com' into text field '//input[@id='email']'.</msg>
-<status status="PASS" starttime="20200315 21:46:19.218" endtime="20200315 21:46:19.431"></status>
+<msg timestamp="20200316 20:57:18.614" level="INFO">Typing text 'bluetooth kulaklık' into text field '//input[@id='productSearch']'.</msg>
+<status status="PASS" starttime="20200316 20:57:18.613" endtime="20200316 20:57:18.798"></status>
 </kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<msg timestamp="20200316 20:57:18.799" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" starttime="20200316 20:57:18.799" endtime="20200316 20:57:19.634"></status>
+</kw>
+<status status="PASS" starttime="20200316 20:57:18.552" endtime="20200316 20:57:19.635"></status>
+</kw>
+<kw name="Filter for Jbl Brand" library="homepage">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
-<arg>${selector_EmailField_Text}</arg>
+<arg>${selector_BrandSearch}</arg>
 </arguments>
-<status status="PASS" starttime="20200315 21:46:19.432" endtime="20200315 21:46:19.443"></status>
+<status status="PASS" starttime="20200316 20:57:19.636" endtime="20200316 20:57:20.489"></status>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>${selector_PasswordField_Text}</arg>
-<arg>${password}</arg>
+<arg>3</arg>
 </arguments>
-<msg timestamp="20200315 21:46:19.443" level="INFO">Typing text 'secretpassword' into text field '//input[@id='password']'.</msg>
-<status status="PASS" starttime="20200315 21:46:19.443" endtime="20200315 21:46:19.528"></status>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks the button identified by ``locator``.</doc>
-<arguments>
-<arg>${selector_LoginSubmit_button}</arg>
-</arguments>
-<msg timestamp="20200315 21:46:19.528" level="INFO">Clicking button 'Giriş'.</msg>
-<status status="PASS" starttime="20200315 21:46:19.528" endtime="20200315 21:46:19.612"></status>
-</kw>
-<status status="PASS" starttime="20200315 21:46:18.723" endtime="20200315 21:46:19.612"></status>
-</kw>
-<status status="PASS" starttime="20200315 21:46:18.710" endtime="20200315 21:46:19.613"></status>
-</kw>
-<kw name="Find a suitable Item" library="homepageApp">
-<kw name="Verify page has Recommended Item" library="homepage">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>${selector_recommendedItem_element}</arg>
-</arguments>
-<status status="PASS" starttime="20200315 21:46:19.614" endtime="20200315 21:46:21.298"></status>
-</kw>
-<status status="PASS" starttime="20200315 21:46:19.613" endtime="20200315 21:46:21.298"></status>
-</kw>
-<kw name="Click on Recommended Item" library="homepage">
-<kw name="Get Element Attribute" library="SeleniumLibrary">
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<arguments>
-<arg>${selector_recommendedItem_element}</arg>
-<arg>href</arg>
-</arguments>
-<assign>
-<var>${recommended_uref}</var>
-</assign>
-<msg timestamp="20200315 21:46:21.896" level="INFO">${recommended_uref} = https://www.hepsiburada.com/samsung-galaxy-watch-active-siyah-sm-r500nzkatur-p-HBV00000IDDEX?magaza=Hepsiburada</msg>
-<status status="PASS" starttime="20200315 21:46:21.299" endtime="20200315 21:46:21.896"></status>
+<msg timestamp="20200316 20:57:23.492" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200316 20:57:20.489" endtime="20200316 20:57:23.492"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${selector_recommendedItem_element}</arg>
+<arg>${selector_BrandSearch}</arg>
 </arguments>
-<msg timestamp="20200315 21:46:21.896" level="INFO">Clicking element '//*[@id="dealoftheday_5"]/div/div/div[2]/div/div/div/div/div[2]/div/div/a'.</msg>
-<status status="PASS" starttime="20200315 21:46:21.896" endtime="20200315 21:46:23.749"></status>
+<msg timestamp="20200316 20:57:23.493" level="INFO">Clicking element '//li[@title='JBL']'.</msg>
+<status status="PASS" starttime="20200316 20:57:23.493" endtime="20200316 20:57:24.951"></status>
 </kw>
-<kw name="Wait Until Location Contains" library="SeleniumLibrary">
-<doc>Waits until the current URL contains ``expected``.</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>${recommended_uref}</arg>
+<arg>3</arg>
 </arguments>
-<status status="PASS" starttime="20200315 21:46:23.749" endtime="20200315 21:46:23.882"></status>
+<msg timestamp="20200316 20:57:27.953" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200316 20:57:24.951" endtime="20200316 20:57:27.953"></status>
 </kw>
-<status status="PASS" starttime="20200315 21:46:21.298" endtime="20200315 21:46:23.882"></status>
+<status status="PASS" starttime="20200316 20:57:19.635" endtime="20200316 20:57:27.954"></status>
 </kw>
-<status status="PASS" starttime="20200315 21:46:19.613" endtime="20200315 21:46:23.882"></status>
-</kw>
-<kw name="Add Item To Basket" library="productpageApp">
-<kw name="Verify Product in Stock" library="productpage">
+<kw name="Filter for Price Range" library="homepage">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
-<arg>${selector_addToCart_Button}</arg>
+<arg>${selector_PriceRange}</arg>
 </arguments>
-<status status="PASS" starttime="20200315 21:46:23.883" endtime="20200315 21:46:25.934"></status>
+<status status="PASS" starttime="20200316 20:57:27.954" endtime="20200316 20:57:27.977"></status>
 </kw>
-<kw name="Element Should Be Enabled" library="SeleniumLibrary">
-<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>${selector_addToCart_Button}</arg>
+<arg>3</arg>
 </arguments>
-<status status="PASS" starttime="20200315 21:46:25.934" endtime="20200315 21:46:26.032"></status>
-</kw>
-<status status="PASS" starttime="20200315 21:46:23.883" endtime="20200315 21:46:26.032"></status>
-</kw>
-<kw name="Add Item To Basket" library="productpage">
-<kw name="Get Text" library="SeleniumLibrary">
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<arguments>
-<arg>${basket_count}</arg>
-</arguments>
-<assign>
-<var>${basket_countBefore}</var>
-</assign>
-<msg timestamp="20200315 21:46:26.069" level="INFO">${basket_countBefore} = 2</msg>
-<status status="PASS" starttime="20200315 21:46:26.033" endtime="20200315 21:46:26.069"></status>
+<msg timestamp="20200316 20:57:30.979" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200316 20:57:27.977" endtime="20200316 20:57:30.979"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${selector_addToCart_Button}</arg>
+<arg>${selector_PriceRange}</arg>
 </arguments>
-<msg timestamp="20200315 21:46:26.069" level="INFO">Clicking element '//button[@id='addToCart']'.</msg>
-<status status="PASS" starttime="20200315 21:46:26.069" endtime="20200315 21:46:26.176"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${basket_countBefore}</arg>
-</arguments>
-<status status="PASS" starttime="20200315 21:46:26.176" endtime="20200315 21:46:26.177"></status>
+<msg timestamp="20200316 20:57:30.980" level="INFO">Clicking element '//li[@alt="750 - 1000 TL"]'.</msg>
+<status status="PASS" starttime="20200316 20:57:30.980" endtime="20200316 20:57:32.257"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>2</arg>
+<arg>5</arg>
 </arguments>
-<msg timestamp="20200315 21:46:28.178" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200315 21:46:26.177" endtime="20200315 21:46:28.179"></status>
+<msg timestamp="20200316 20:57:37.258" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200316 20:57:32.257" endtime="20200316 20:57:37.258"></status>
 </kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<arguments>
-<arg>${basket_count}</arg>
-</arguments>
-<assign>
-<var>${basket_countAfter}</var>
-</assign>
-<msg timestamp="20200315 21:46:28.194" level="INFO">${basket_countAfter} = 3</msg>
-<status status="PASS" starttime="20200315 21:46:28.179" endtime="20200315 21:46:28.194"></status>
+<status status="PASS" starttime="20200316 20:57:27.954" endtime="20200316 20:57:37.258"></status>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${basket_countAfter}</arg>
-</arguments>
-<status status="PASS" starttime="20200315 21:46:28.195" endtime="20200315 21:46:28.195"></status>
-</kw>
-<kw name="Should Not Be Equal" library="BuiltIn">
-<doc>Fails if the given objects are equal.</doc>
-<arguments>
-<arg>${basket_countAfter}</arg>
-<arg>${basket_countBefore}</arg>
-</arguments>
-<status status="PASS" starttime="20200315 21:46:28.195" endtime="20200315 21:46:28.195"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20200315 21:46:29.196" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20200315 21:46:28.196" endtime="20200315 21:46:29.196"></status>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<arguments>
-<arg>None</arg>
-<arg>ESCAPE</arg>
-</arguments>
-<msg timestamp="20200315 21:46:29.197" level="INFO">Sending key(s) ('ESCAPE',) to page.</msg>
-<msg timestamp="20200315 21:46:29.197" level="INFO">Pressing special key ESCAPE to browser.</msg>
-<msg timestamp="20200315 21:46:29.197" level="INFO">Releasing special key ESCAPE.</msg>
-<status status="PASS" starttime="20200315 21:46:29.197" endtime="20200315 21:46:29.205"></status>
-</kw>
-<status status="PASS" starttime="20200315 21:46:26.033" endtime="20200315 21:46:29.205"></status>
-</kw>
-<status status="PASS" starttime="20200315 21:46:23.882" endtime="20200315 21:46:29.205"></status>
-</kw>
-<kw name="Open Basket" library="productpageApp">
-<kw name="Open Basket Page" library="productpage">
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${basket_count}</arg>
-</arguments>
-<msg timestamp="20200315 21:46:29.207" level="INFO">Clicking element '//*[@id="cartItemCount"]/label'.</msg>
-<status status="PASS" starttime="20200315 21:46:29.207" endtime="20200315 21:46:30.674"></status>
-</kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current page title equals ``title``.</doc>
-<arguments>
-<arg>${myBasketTitle}</arg>
-</arguments>
-<msg timestamp="20200315 21:46:30.717" level="INFO">Page title is 'Sepetim'.</msg>
-<status status="PASS" starttime="20200315 21:46:30.674" endtime="20200315 21:46:30.717"></status>
-</kw>
-<status status="PASS" starttime="20200315 21:46:29.206" endtime="20200315 21:46:30.718"></status>
-</kw>
-<status status="PASS" starttime="20200315 21:46:29.205" endtime="20200315 21:46:30.718"></status>
-</kw>
-<kw name="Go to Payment Process" library="basketpageApp">
-<kw name="Click Finish Shopping" library="basketpage">
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20200315 21:46:32.720" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200315 21:46:30.718" endtime="20200315 21:46:32.721"></status>
-</kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current page title equals ``title``.</doc>
-<arguments>
-<arg>${basket_Title}</arg>
-</arguments>
-<msg timestamp="20200315 21:46:32.737" level="INFO">Page title is 'Sepetim'.</msg>
-<status status="PASS" starttime="20200315 21:46:32.721" endtime="20200315 21:46:32.737"></status>
-</kw>
+<kw name="Filter for Color" library="homepage">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
-<arg>${selector_FinishShopping}</arg>
+<arg>${selector_ColorOption}</arg>
 </arguments>
-<status status="PASS" starttime="20200315 21:46:32.737" endtime="20200315 21:46:32.760"></status>
+<status status="PASS" starttime="20200316 20:57:37.260" endtime="20200316 20:57:37.287"></status>
 </kw>
-<status status="PASS" starttime="20200315 21:46:30.718" endtime="20200315 21:46:32.761"></status>
-</kw>
-<kw name="Shipment Page Continue" library="basketpage">
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>2</arg>
+<arg>3</arg>
 </arguments>
-<msg timestamp="20200315 21:46:34.762" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200315 21:46:32.761" endtime="20200315 21:46:34.763"></status>
+<msg timestamp="20200316 20:57:40.288" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200316 20:57:37.287" endtime="20200316 20:57:40.288"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>${selector_FinishShopping}</arg>
+<arg>${selector_ColorOption}</arg>
 </arguments>
-<msg timestamp="20200315 21:46:34.764" level="INFO">Clicking element '//*[@id="short-summary"]/div[1]/div[2]/button'.</msg>
-<status status="PASS" starttime="20200315 21:46:34.763" endtime="20200315 21:46:34.841"></status>
+<msg timestamp="20200316 20:57:40.289" level="INFO">Clicking element '//li[@alt="Siyah"]'.</msg>
+<status status="PASS" starttime="20200316 20:57:40.289" endtime="20200316 20:57:40.866"></status>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>${selector_FinishShopping}</arg>
-</arguments>
-<status status="PASS" starttime="20200315 21:46:34.842" endtime="20200315 21:46:34.859"></status>
+<kw name="Debug" library="DebugLibrary">
+<doc>Open a interactive shell, run any RobotFramework keywords.</doc>
+<status status="PASS" starttime="20200316 20:57:40.867" endtime="20200316 20:58:01.145"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20200315 21:46:36.861" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200315 21:46:34.859" endtime="20200315 21:46:36.862"></status>
+<status status="PASS" starttime="20200316 20:57:37.259" endtime="20200316 20:58:01.145"></status>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${selector_FinishShopping}</arg>
-</arguments>
-<msg timestamp="20200315 21:46:36.863" level="INFO">Clicking element '//*[@id="short-summary"]/div[1]/div[2]/button'.</msg>
-<status status="PASS" starttime="20200315 21:46:36.862" endtime="20200315 21:46:37.097"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20200315 21:46:39.098" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200315 21:46:37.097" endtime="20200315 21:46:39.099"></status>
-</kw>
-<status status="PASS" starttime="20200315 21:46:32.761" endtime="20200315 21:46:39.099"></status>
-</kw>
-<kw name="Card Detail Page Continue" library="basketpage">
-<kw name="Title Should Be" library="SeleniumLibrary">
-<doc>Verifies that the current page title equals ``title``.</doc>
-<arguments>
-<arg>${payment_Title}</arg>
-</arguments>
-<msg timestamp="20200315 21:46:39.113" level="INFO">Page title is 'Ödeme Bilgileri'.</msg>
-<status status="PASS" starttime="20200315 21:46:39.100" endtime="20200315 21:46:39.113"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>${selector_CardInput_Area}</arg>
-</arguments>
-<status status="PASS" starttime="20200315 21:46:39.113" endtime="20200315 21:46:39.138"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>${selector_CardInput_Area}</arg>
-</arguments>
-<msg timestamp="20200315 21:46:39.138" level="INFO">Clicking element '//*[@id="payment-container"]/div[3]/div/div/div[1]/a/i[2]'.</msg>
-<status status="PASS" starttime="20200315 21:46:39.138" endtime="20200315 21:46:39.192"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>2</arg>
-</arguments>
-<msg timestamp="20200315 21:46:41.192" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20200315 21:46:39.192" endtime="20200315 21:46:41.193"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` is visible.</doc>
-<arguments>
-<arg>${selector_CardDetail_Area}</arg>
-</arguments>
-<status status="PASS" starttime="20200315 21:46:41.193" endtime="20200315 21:46:41.213"></status>
-</kw>
-<status status="PASS" starttime="20200315 21:46:39.099" endtime="20200315 21:46:41.213"></status>
-</kw>
-<status status="PASS" starttime="20200315 21:46:30.718" endtime="20200315 21:46:41.213"></status>
+<status status="PASS" starttime="20200316 20:57:14.694" endtime="20200316 20:58:01.145"></status>
 </kw>
 <kw name="close session" library="utils" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200315 21:46:41.214" endtime="20200315 21:46:41.370"></status>
+<status status="PASS" starttime="20200316 20:58:01.145" endtime="20200316 20:58:01.266"></status>
 </kw>
-<status status="PASS" starttime="20200315 21:46:41.213" endtime="20200315 21:46:41.371"></status>
+<status status="PASS" starttime="20200316 20:58:01.145" endtime="20200316 20:58:01.266"></status>
 </kw>
-<status status="PASS" starttime="20200315 21:46:08.366" endtime="20200315 21:46:41.371" critical="yes"></status>
+<status status="PASS" starttime="20200316 20:57:12.669" endtime="20200316 20:58:01.267" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200315 21:46:08.029" endtime="20200315 21:46:41.373"></status>
+<status status="PASS" starttime="20200316 20:57:12.496" endtime="20200316 20:58:01.269"></status>
 </suite>
 <statistics>
 <total>
@@ -436,7 +181,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Scenario1">Scenario1</stat>
+<stat pass="1" fail="0" id="s1" name="Scenario2">Scenario2</stat>
 </suite>
 </statistics>
 <errors>
